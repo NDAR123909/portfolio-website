@@ -28,22 +28,26 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            padding: 1rem 0;
+            padding: 0.5rem 0;
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: center;
-            gap: 2rem;
+            justify-content: space-evenly;
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
         nav a {
             text-decoration: none;
             color: #333;
             font-weight: 500;
-            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            padding: 0.4rem 1rem;
             border-radius: 20px;
             transition: all 0.3s ease;
         }
@@ -58,7 +62,7 @@
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 10rem 2rem 4rem;
+            padding: 4rem 2rem 4rem;
             text-align: center;
             min-height: 100vh;
             display: flex;
@@ -98,6 +102,7 @@
         .profile-image i {
             position: absolute;
             z-index: 1;
+            display: none;
         }
 
         .hero h1 {
@@ -174,6 +179,10 @@
         .about-text {
             font-size: 1.1rem;
             line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
         }
 
         .about-stats {
@@ -413,24 +422,12 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="profile-image">
                 <!-- Replace 'your-photo.jpg' with your actual image file name -->
-                <img src="<blockquote class="imgur-embed-pub" lang="en" data-id="a/aMvc40v" data-context="false" ><a href="//imgur.com/a/aMvc40v"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>" alt="Noah Riego" id="profile-pic">
+                <img src="https://i.imgur.com/F5pNnva.png" alt="Noah Riego" id="profile-pic">
                 <!-- The icon will show as fallback if image doesn't load -->
                 <i class="fas fa-atom" id="fallback-icon"></i>
             </div>
@@ -682,36 +679,21 @@
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Add scroll effect to navigation
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.background = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                nav.style.background = 'rgba(255, 255, 255, 0.95)';
-            }
-        });
-
         // Handle profile image loading
         window.addEventListener('load', () => {
             const profilePic = document.getElementById('profile-pic');
             const fallbackIcon = document.getElementById('fallback-icon');
             
+            // Hide the icon by default since we expect an image
+            fallbackIcon.style.display = 'none';
+            
             profilePic.onload = function() {
+                // Image loaded successfully, keep icon hidden
                 fallbackIcon.style.display = 'none';
             };
             
             profilePic.onerror = function() {
+                // Image failed to load, hide image and show icon
                 profilePic.style.display = 'none';
                 fallbackIcon.style.display = 'flex';
             };
