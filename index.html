@@ -28,27 +28,28 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            padding: 0.5rem 0;
+            padding: 1rem 0;
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: space-evenly;
-            gap: 1rem;
+            justify-content: center;
+            gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
+            flex-wrap: wrap;
         }
 
         nav a {
             text-decoration: none;
             color: #333;
             font-weight: 500;
-            font-size: 0.9rem;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
+            font-size: 1rem;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
             transition: all 0.3s ease;
         }
 
@@ -62,7 +63,7 @@
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 4rem 2rem 4rem;
+            padding: 6rem 2rem 4rem;
             text-align: center;
             min-height: 100vh;
             display: flex;
@@ -136,18 +137,27 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
+        /* Main Container */
+        .main-container {
+            background: white;
+            margin: 0 auto;
+            width: 100%;
+        }
+
         /* Section Styles */
         section {
             padding: 4rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
+            width: 100%;
         }
 
         .section-bg {
             background: white;
-            margin: 2rem 0;
+            margin: 2rem auto;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
         }
 
         h2 {
@@ -369,6 +379,8 @@
             color: white;
             text-align: center;
             padding: 2rem;
+            width: 100%;
+            margin: 0;
         }
 
         .social-links {
@@ -406,22 +418,51 @@
                 font-size: 2rem;
             }
 
+            .hero {
+                padding: 5rem 1rem 3rem;
+            }
+
             .about-content {
                 grid-template-columns: 1fr;
             }
 
             nav ul {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 0.5rem;
+                align-items: center;
+            }
+
+            nav {
+                padding: 0.5rem 0;
             }
 
             .skills-grid {
                 grid-template-columns: 1fr;
             }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .section-bg {
+                margin: 1rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
@@ -438,235 +479,237 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section-bg">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div class="about-stats">
-                <div class="stat-item">
-                    <span class="stat-number">2028</span>
-                    <span>Expected Graduation</span>
+    <div class="main-container">
+        <!-- About Section -->
+        <section id="about" class="section-bg">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">2028</span>
+                        <span>Expected Graduation</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span>Team Members Trained</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2+</span>
+                        <span>Research Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1+</span>
+                        <span>Years in AI Research</span>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">5+</span>
-                    <span>Team Members Trained</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">2+</span>
-                    <span>Research Projects</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">1+</span>
-                    <span>Years in AI Research</span>
+                <div class="about-text">
+                    <p>Hi there! I'm a passionate Applied Physics student at the University of Arizona's W.A Franke Honors College, with a minor in Data Science. My journey spans from the Philippines to Arizona, driven by a deep fascination with the intersection of physics research and artificial intelligence.</p>
+                    
+                    <p>Currently I'm working as a Backend Developer and Machine Learning Engineer on the Lynnapse research-matchmaking platform, I specialize in AI integration, chatbot development, and local LLM prompting. My experience includes a year as a Prompt Engineer at Media Meter Inc., where I contributed to AI product development and trained incoming team members.</p>
+                    
+                    <p>My career goal is to understand how to merge AI with physics research, leveraging generative AI to make accurate predictions in realistic environments while using it to simulate real-world mechanics. I'm passionate about the potential of AI to revolutionize how we approach and conduct physics research.</p>
                 </div>
             </div>
-            <div class="about-text">
-                <p>Hi there! I'm a passionate Applied Physics student at the University of Arizona's W.A Franke Honors College, with a minor in Data Science. My journey spans from the Philippines to Arizona, driven by a deep fascination with the intersection of physics research and artificial intelligence.</p>
-                
-                <p>Currently I'm working as a Backend Developer and Machine Learning Engineer on the Lynnapse research-matchmaking platform, I specialize in AI integration, chatbot development, and local LLM prompting. My experience includes a year as a Prompt Engineer at Media Meter Inc., where I contributed to AI product development and trained incoming team members.</p>
-                
-                <p>My career goal is to understand how to merge AI with physics research, leveraging generative AI to make accurate predictions in realistic environments while using it to simulate real-world mechanics. I'm passionate about the potential of AI to revolutionize how we approach and conduct physics research.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section-bg">
-        <h2>Skills & Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Technical Skills</h3>
-                <div class="skill-item">
-                    <span>Python</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 75%"></div>
+        <!-- Skills Section -->
+        <section id="skills" class="section-bg">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Technical Skills</h3>
+                    <div class="skill-item">
+                        <span>Python</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="skill-item">
-                    <span>VPython</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 70%"></div>
+                    <div class="skill-item">
+                        <span>VPython</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="skill-item">
-                    <span>Spreadsheets</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 75%"></div>
+                    <div class="skill-item">
+                        <span>Spreadsheets</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="skill-item">
-                    <span>Notion</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 75%"></div>
+                    <div class="skill-item">
+                        <span>Notion</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="skill-category">
-                <h3><i class="fas fa-brain"></i> AI & Research</h3>
-                <div class="skill-item">
-                    <span>Prompt Engineering</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span>Machine Learning</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 70%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span>Local LLM Integration</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span>Research Documentation</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%"></div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="skill-category">
-                <h3><i class="fas fa-calculator"></i> Mathematical Concepts</h3>
-                <div class="skill-item">
-                    <span>Differential Calculus</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 80%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span>Integral Calculus</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 75%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span>Statistics</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 70%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span>Mathematical Modeling</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 75%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section-bg">
-        <h2>Experience</h2>
-        <div class="experience-timeline">
-            <div class="timeline-item">
-                <h3>Backend Developer / Machine Learning Engineer</h3>
-                <div class="company">Finding Research Made Easy (FRME) - Lynnapse Project</div>
-                <div class="date">February 2025 - Present</div>
-                <ul>
-                    <li>Joined the backend team to develop research-matchmaking website Lynnapse</li>
-                    <li>Sole developer of the website's chatbot Lynn, focusing on AI integration with UI handling</li>
-                    <li>Conducted research on local LLM prompting techniques and AI integration</li>
-                    <li>Presented weekly coding demonstrations and research findings to project team</li>
-                </ul>
-            </div>
-            
-            <div class="timeline-item">
-                <h3>Junior Prompt Engineer</h3>
-                <div class="company">Media Meter Inc., Quezon City, Philippines</div>
-                <div class="date">July 2023 - August 2024</div>
-                <ul>
-                    <li>Interned at media monitoring company contributing to AI product salina.app development</li>
-                    <li>Conducted research on AI prompting techniques with weekly presentations to Growth team</li>
-                    <li>Promoted to full-time prompt engineer role</li>
-                    <li>Trained over 5 incoming team members in prompt engineering and research documentation</li>
-                </ul>
-            </div>
-            
-            <div class="timeline-item">
-                <h3>Physics Research Student</h3>
-                <div class="company">PHYS 161H - University of Arizona</div>
-                <div class="date">January 2025 - April 2025</div>
-                <ul>
-                    <li>Performed physics research activities and data collection using modern laboratory equipment</li>
-                    <li>Worked with CAD 3D modeling and orbital shakers under lab instructor C.W. Wolgemuth</li>
-                    <li>Completed literature reviews and culminating laboratory reports</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section-bg">
-        <h2>Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Lynn - AI Chatbot</h3>
-                <p>Developed an intelligent chatbot for the Lynnapse research-matchmaking platform. The bot integrates local LLM capabilities with intuitive UI handling to help researchers find collaboration opportunities.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Machine Learning</span>
-                    <span class="tech-tag">LLM Integration</span>
-                    <span class="tech-tag">Backend Development</span>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <h3>AI Prompting Research</h3>
-                <p>Conducted comprehensive research on AI prompting techniques at Media Meter Inc., contributing to the development of salina.app and establishing best practices for prompt engineering.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Prompt Engineering</span>
-                    <span class="tech-tag">AI Research</span>
-                    <span class="tech-tag">Documentation</span>
-                    <span class="tech-tag">Team Training</span>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <h3>Physics Laboratory Research</h3>
-                <p>Accelerated introductory mechanics research involving modern laboratory equipment, CAD 3D modeling, and comprehensive data analysis with detailed laboratory reports.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">CAD Modeling</span>
-                    <span class="tech-tag">Data Analysis</span>
-                    <span class="tech-tag">Research Writing</span>
-                    <span class="tech-tag">Laboratory Equipment</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-bg">
-        <h2>Get In Touch</h2>
-        <div class="contact-content">
-            <p>I'm always excited to discuss physics research, AI innovations, or potential collaborations. Feel free to reach out!</p>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>noahriego@arizona.edu</p>
                 </div>
                 
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <h3>Phone</h3>
-                    <p>(520) 239-6453</p>
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> AI & Research</h3>
+                    <div class="skill-item">
+                        <span>Prompt Engineering</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Machine Learning</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Local LLM Integration</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Research Documentation</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Location</h3>
-                    <p>Tucson, AZ 85721</p>
+                <div class="skill-category">
+                    <h3><i class="fas fa-calculator"></i> Mathematical Concepts</h3>
+                    <div class="skill-item">
+                        <span>Differential Calculus</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Integral Calculus</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Statistics</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Mathematical Modeling</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section-bg">
+            <h2>Experience</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <h3>Backend Developer / Machine Learning Engineer</h3>
+                    <div class="company">Finding Research Made Easy (FRME) - Lynnapse Project</div>
+                    <div class="date">February 2025 - Present</div>
+                    <ul>
+                        <li>Joined the backend team to develop research-matchmaking website Lynnapse</li>
+                        <li>Sole developer of the website's chatbot Lynn, focusing on AI integration with UI handling</li>
+                        <li>Conducted research on local LLM prompting techniques and AI integration</li>
+                        <li>Presented weekly coding demonstrations and research findings to project team</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>Junior Prompt Engineer</h3>
+                    <div class="company">Media Meter Inc., Quezon City, Philippines</div>
+                    <div class="date">July 2023 - August 2024</div>
+                    <ul>
+                        <li>Interned at media monitoring company contributing to AI product salina.app development</li>
+                        <li>Conducted research on AI prompting techniques with weekly presentations to Growth team</li>
+                        <li>Promoted to full-time prompt engineer role</li>
+                        <li>Trained over 5 incoming team members in prompt engineering and research documentation</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>Physics Research Student</h3>
+                    <div class="company">PHYS 161H - University of Arizona</div>
+                    <div class="date">January 2025 - April 2025</div>
+                    <ul>
+                        <li>Performed physics research activities and data collection using modern laboratory equipment</li>
+                        <li>Worked with CAD 3D modeling and orbital shakers under lab instructor C.W. Wolgemuth</li>
+                        <li>Completed literature reviews and culminating laboratory reports</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-bg">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Lynn - AI Chatbot</h3>
+                    <p>Developed an intelligent chatbot for the Lynnapse research-matchmaking platform. The bot integrates local LLM capabilities with intuitive UI handling to help researchers find collaboration opportunities.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">LLM Integration</span>
+                        <span class="tech-tag">Backend Development</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>AI Prompting Research</h3>
+                    <p>Conducted comprehensive research on AI prompting techniques at Media Meter Inc., contributing to the development of salina.app and establishing best practices for prompt engineering.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Prompt Engineering</span>
+                        <span class="tech-tag">AI Research</span>
+                        <span class="tech-tag">Documentation</span>
+                        <span class="tech-tag">Team Training</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Physics Laboratory Research</h3>
+                    <p>Accelerated introductory mechanics research involving modern laboratory equipment, CAD 3D modeling, and comprehensive data analysis with detailed laboratory reports.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">CAD Modeling</span>
+                        <span class="tech-tag">Data Analysis</span>
+                        <span class="tech-tag">Research Writing</span>
+                        <span class="tech-tag">Laboratory Equipment</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-bg">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <p>I'm always excited to discuss physics research, AI innovations, or potential collaborations. Feel free to reach out!</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>noahriego@arizona.edu</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>(520) 239-6453</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>Tucson, AZ 85721</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -697,6 +740,20 @@
                 profilePic.style.display = 'none';
                 fallbackIcon.style.display = 'flex';
             };
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
     </script>
 </body>
